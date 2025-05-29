@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #89f7fe, #66a6ff);
+  color: #333;
+  text-align: center;
+  padding: 40px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  background-color: rgba(63, 8, 114, 0.88);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+  position: relative;
+  /* Floating effect */
+  transform: translateY(0);
+  animation: float 3s ease-in-out infinite;
+}
+h1{
+    color: #f0f0f0;
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #3399ff;
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #3399ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0077cc;
+}
+
+.weather {
+  margin-top: 25px;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.weather img {
+  width: 80px;
+  margin-top: 10px;
+  user-select: none;
+}
+
+/* Weather type backgrounds with vibrant rgba */
+
+.weather.sunny {
+  background: linear-gradient(
+    135deg,
+    rgba(252, 234, 187, 0.9),
+    rgba(248, 181, 0, 0.9)
+  );
+  color: #7a4a00;
+  box-shadow: 0 8px 25px rgba(248, 181, 0, 0.7);
+}
+
+.weather.rainy {
+  background: linear-gradient(
+    135deg,
+    rgba(102, 125, 182, 0.85),
+    rgba(0, 130, 200, 0.85),
+    rgba(0, 130, 200, 0.85),
+    rgba(102, 125, 182, 0.85)
+  );
+  color: #e0f7ff;
+  box-shadow: 0 8px 25px rgba(0, 130, 200, 0.7);
+}
+
+.weather.cloudy {
+  background: linear-gradient(
+    135deg,
+    rgba(189, 195, 199, 0.85),
+    rgba(44, 62, 80, 0.85)
+  );
+  color: #f0f0f0;
+  box-shadow: 0 8px 25px rgba(44, 62, 80, 0.7);
+}
+
+.weather.snowy {
+  background: linear-gradient(
+    135deg,
+    rgba(224, 234, 252, 0.9),
+    rgba(207, 222, 243, 0.9)
+  );
+  color: #2f4f6f;
+  box-shadow: 0 8px 25px rgba(207, 222, 243, 0.7);
+}
